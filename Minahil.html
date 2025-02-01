@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Proposal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: pink;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: red;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .yes {
+            background: green;
+            color: white;
+        }
+        .no {
+            background: red;
+            color: white;
+            position: absolute;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Will You Be My Valentine Minahil? ❤️</h1>
+        <button class="btn yes" onclick="sayYes()">Yes</button>
+        <button class="btn no" onmouseover="moveNo()">No</button>
+        <p id="message" class="hidden">YAYAYAYA!! MWAH I LOVE YOU PHENYL ML MINAHIL* 🥰</p>
+    </div>
+
+    <script>
+        function sayYes() {
+            document.getElementById('message').classList.remove('hidden');
+        }
+
+        function moveNo() {
+            let button = document.querySelector('.no');
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+
+</body>
+</html>
